@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>frquency</title>
+</head>
+<body>
+<h1>Frequent Words Searcher !!</h1>
+<form action="{% url 'result' %}" method="POST" >
+    {% csrf_token %}
+
+    Enter Url :<br> <textarea type="text" name="url"  style="    margin: 0px;width: 856px; height: 70px;">
+    Enter url here</textarea>
+    <br>
+    <button type="submit" >Submit</button>
+</form>
+</body>
+</html>

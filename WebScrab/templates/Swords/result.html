@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>result</title>
+</head>
+<body>
+
+<a href="{% url 'frequent' %}"
+>Home</a>
+<br>
+<br>
+
+<div>
+    {%if messages %}
+    {% for message in messages %}
+    <h3 style="color:green;" >{{message }}</h3>
+    {% endfor %}
+    {% endif %}
+</div>
+{% if data %}
+{% for i in data %}
+The words are : <p style="color:red;">{{i.word}}</p>  and number of repetition   <p style="color:red;">{{i.number}}</p>
+<br>
+{% endfor %}
+{% else %}
+<h1>Nothing to Show </h1>
+{% endif %}
+
+</body>
+</html>
